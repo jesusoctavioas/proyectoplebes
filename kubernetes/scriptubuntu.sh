@@ -1,6 +1,6 @@
 ls
 
-# eksctl create cluster --name valaxy  \
+# eksctl create cluster --name tapioca  \
 # --region us-east-1 \
 # --node-type t2.small \
 # --nodes-min 2 \
