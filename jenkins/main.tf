@@ -19,7 +19,7 @@ variable "ingressrules" {
 }
 
 resource "aws_security_group" "web_traffic" {
-  name        = "Allow web traffic"
+  name        = "Jenkins Allow web traffic"
   description = "Allow ssh and standard http/https ports inbound and everything outbound"
 
   dynamic "ingress" {
@@ -62,7 +62,7 @@ data "aws_ami" "amzlinux" {
 
 }
 
-resource "aws_instance" "datadog-2" {
+resource "aws_instance" "jenkins" {
   count           = 1
   ami             = data.aws_ami.amzlinux.id
   instance_type   = "t2.micro"
